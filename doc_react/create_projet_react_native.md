@@ -144,3 +144,18 @@ Attendre que le graphique de dépendances se charge
     > react-native run-android --variant=gvrDebug
 
 Bravo !!!
+
+## Avec @react-native-community/geolocation
+
+pour l'instan dans le fichier `ViroSample\node_modules\@react-native-community\geolocation\android\src\main\java\com\reactnativecommunity\geolocation\GeolocationModule.java` pour la geolocalisation avec `@react-native-community/geolocation` il faut commenter
+
+
+- la ligne 21 `import androidx.core.content.ContextCompat;`
+
+
+- la ligne 274 a 276 
+
+    int finePermission = ContextCompat.checkSelfPermission(getReactApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION);
+    if (provider.equals(LocationManager.GPS_PROVIDER) && finePermission != PackageManager.PERMISSION_GRANTED) {
+       return null;
+    }
