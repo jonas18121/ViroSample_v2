@@ -121,7 +121,9 @@ Pour utiliser la librairie ViroReact avec Android Studio , il faut :
 
 - 4) Copier le fichier `setup-ide.sh` qui ce trouve à cette adresse `nom_du_projet\node_modules\react-viro\bin\setup-ide.sh` et le coller à la racine du projet
 
-- 4) Ouvrir un premier Terminal et executer la commande :
+- 5) Mettre `<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />` dans le fichier : `ViroSample\android\app\src\main\AndroidManifest.xml`, pour demader a l'utilisateur la permisson d'avoir sa localisation
+
+- 6) Ouvrir un premier Terminal et executer la commande :
 
     > ./setup-ide.sh --android
 
@@ -135,7 +137,9 @@ Pour utiliser la librairie ViroReact avec Android Studio , il faut :
 
 Attendre que le graphique de dépendances se charge
 
-- 5) Ouvrir un deuxième Terminal et executer la commande :
+- 7) S'assurer que votre emulateur est en marche et que votre vrai mobile est connecter a votre ordinateur en mode developpement
+
+- 8) Ouvrir un deuxième Terminal et executer la commande :
 
     > react-native run-android --variant=gvrDebug
 
